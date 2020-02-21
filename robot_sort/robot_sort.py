@@ -127,15 +127,22 @@ class SortingRobot:
               
         Execution:
         """
-        while len(self._list) > 0 and self.set_light_on():
-          self.can_move_right()
-          self.move_right()
-          self.compare_item()
-          if self.compare_item == 1:
-            self.swap_item()
-          elif self.compare_item == -1:
-            self.
-        pass
+        while True:
+          if not self.light_is_on():
+            self.set_light_on()
+            while self.can_move_right():
+              if self.compare_item() == -1 or self.compare_item() == None:
+                self.swap_item()
+              self.move_right()
+            while self.can_move_left():
+              if self.compare_item() == 1:
+                self.set_light_off()
+                self.swap_item()
+              self.move_left()
+          else:
+            break
+
+        
 
 
 if __name__ == "__main__":
