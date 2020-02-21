@@ -90,6 +90,9 @@ def chef_building (number of floors, eggs):
   runtime complexity will be 0(n) => worst case scenario we drop the eggs n times 
 
 
+
+<!-- unsuccessful attempt -->
+
 <!-- 
  however if egg break at a level higher than the middle floor:
   assign eggs at index[0] to f

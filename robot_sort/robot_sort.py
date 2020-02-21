@@ -96,7 +96,45 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
+        """
+        Understand
+        1. Robot should sort using already predefined methods
+        2. what sorting paradigm may be appropriate for this method?
+        3. Rule Breakers:
+          - assignment can't be made to variables
+          - library methods can't be used 
+          - 
+        4. how important is the light method for determining when to swap? 
+        
+        Plan
+        the appropriate programming paradigm to adopt is the bubble sort which works by repeatedly swapping the adjacents elements if its in wrong order and on condition that the robot can move and the robot has been able to move.
+        The ability of a robot will be determined if its light method is on or off.
+        
+         Pseudo code 
+         so its like bubble sort, using the predefined methods, on condition that the light switch is on
+         so if light switch is on, it indicates player can move, then player compares held item with next item, if  bigger do this, if smaller do that , if equal do that, then move to next index, is light switch on? rinse repeat
+         
+         while the length of self.list  is greater than 0 and 
+         while the method of self.light is ON:
+           if robot can self.can_move_right:
+             self.move_right
+             self.compare_item:
+              if self.item > current_compared_position:
+                self.swap_item
+              elif self.item < current_compared_position:
+                self.move_right
+              
+              
+        Execution:
+        """
+        while len(self._list) > 0 and self.set_light_on():
+          self.can_move_right()
+          self.move_right()
+          self.compare_item()
+          if self.compare_item == 1:
+            self.swap_item()
+          elif self.compare_item == -1:
+            self.
         pass
 
 
