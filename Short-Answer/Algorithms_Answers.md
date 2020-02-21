@@ -59,14 +59,39 @@ determines at what index in a list/floor an egg changes from whole to broken.
 minimizes the number of dropped  and broken eggs 
 
 what types of input can we expect 
+number of eggs
+number of floors
  valid => int
  invalid => decimal, str, char
 
 2. Plan 
 first pass  - iterative approach
 
+
 def chef_building (number of floors, eggs): 
-  declare floor list 
+  declare floor as list 
+  declare lowest floor  and highest floor 
+  while lowest floor is higher than highest floor:
+    check if eggs break at the middle floor:
+      if true:
+        ignore floors greater than middle floor:
+        check if eggs break at the middle floor of current section
+      when eggs do no break at a floor assign floor level to f or min_destruction_level
+      
+      
+      if false:
+        ignore floors lower than middle floor
+        check if eggs break at the middle floor of current section
+      when eggs do no break at a floor assign floor level to f or min_destruction_level
+
+  return min_destruction_level
+
+
+  runtime complexity will be 0(n) => worst case scenario we drop the eggs n times 
+
+
+<!-- 
+ however if egg break at a level higher than the middle floor:
   assign eggs at index[0] to f
   while floor is more than one:
     loop through floors:
@@ -80,9 +105,7 @@ def chef_building (number of floors, eggs):
         if 'eggs' at floor level is more than eggs at f: 
           assign floor level to min_destruction_level
   
-  return min_destruction_level
-
-  runtime complexity will be 0(n*2)
+ -->
 
 
 
